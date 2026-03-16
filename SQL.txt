@@ -1,5 +1,5 @@
 Nome do bando de dados: 
-venda
+vendas
 
 CREATE TABLE Cliente (
   Id SERIAL PRIMARY KEY,
