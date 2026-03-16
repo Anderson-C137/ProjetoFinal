@@ -1,0 +1,31 @@
+Nome do bando de dados: 
+venda
+
+CREATE TABLE Cliente (
+  Id SERIAL PRIMARY KEY,
+  Nome VARCHAR(50) NOT NULL,
+  CPF VARCHAR(15) UNIQUE,
+  Genero VARCHAR(10),
+  Rua VARCHAR(50),
+  Numero VARCHAR(7),
+  Cidade VARCHAR(20),
+  Estado VARCHAR(20),
+  Celular VARCHAR(15),
+  Email VARCHAR(30),
+  Idade VARCHAR (3),
+  DataNascimento DATE,
+  Foto BYTEA
+);
+
+CREATE TABLE Produto (
+  Id SERIAL PRIMARY KEY,
+  Nome VARCHAR(100) NOT NULL,
+  Preco FLOAT
+);
+
+CREATE TABLE Venda (
+  Id SERIAL PRIMARY KEY,
+  IdCliente INT REFERENCES Cliente(Id),
+  IdProduto INT REFERENCES Produto(Id),
+  Quantidade INT
+);
