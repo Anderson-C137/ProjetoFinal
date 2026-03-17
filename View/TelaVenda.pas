@@ -10,6 +10,7 @@ uses
   Repositorio.Venda,
   TelaVendaCadastro,
   DataModulePrincipal,
+  TelaRelatorio,
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls,
   Datasnap.DBClient;
@@ -23,11 +24,13 @@ type
     pnlPrincipal: TPanel;
     grdVendas: TDBGrid;
     dtsVendas: TDataSource;
+    btnRelatorio: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnAdicionarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnRemoverClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure btnRelatorioClick(Sender: TObject);
   private
     { Private declarations }
     FRepositorio: TRepositorioVenda;
@@ -132,6 +135,18 @@ begin
     // Atualiza o banco de dados
     FRepositorio.Salvar(Venda);
   end;
+end;
+
+procedure TfrmTelaVenda.btnRelatorioClick(Sender: TObject);
+begin
+frmTelaRelatorio := TfrmTelaRelatorio.create(self);
+try
+  frmTelaRElatorio.RLReport.Preview();
+finally
+  frmTelaRelatorio.free;
+end;
+
+
 end;
 
 procedure TfrmTelaVenda.btnRemoverClick(Sender: TObject);

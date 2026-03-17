@@ -20,7 +20,8 @@ uses
   ServicePessoaAPI in 'Service\ServicePessoaAPI.pas',
   ControllerCliente in 'Controller\ControllerCliente.pas',
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  TelaRelatorio in 'View\TelaRelatorio.pas' {frmTelaRelatorio};
 
 {$R *.res}
 
@@ -30,5 +31,6 @@ begin
   TStyleManager.TrySetStyle('Emerald Light Slate');
   Application.CreateForm(TdtmPrincipal, dtmPrincipal);
   Application.CreateForm(TfrmTelaPrincipal, frmTelaPrincipal);
+  Application.CreateForm(TfrmTelaRelatorio, frmTelaRelatorio);
   Application.Run;
 end.

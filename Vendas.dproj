@@ -169,6 +169,10 @@
         <DCCReference Include="Repository\Repositorio.Venda.pas"/>
         <DCCReference Include="Service\ServicePessoaAPI.pas"/>
         <DCCReference Include="Controller\ControllerCliente.pas"/>
+        <DCCReference Include="View\TelaRelatorio.pas">
+            <Form>frmTelaRelatorio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

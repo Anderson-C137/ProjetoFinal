@@ -48,7 +48,6 @@ object frmTelaVenda: TfrmTelaVenda
       TabOrder = 1
       WordWrap = True
       OnClick = btnEditarClick
-      ExplicitLeft = 81
     end
     object btnRemover: TButton
       Left = 209
@@ -63,6 +62,22 @@ object frmTelaVenda: TfrmTelaVenda
       TabOrder = 2
       WordWrap = True
       OnClick = btnRemoverClick
+    end
+    object btnRelatorio: TButton
+      Left = 313
+      Top = 1
+      Width = 154
+      Height = 79
+      Align = alLeft
+      Caption = 'Relat'#243'rio de Vendas'
+      ImageIndex = 20
+      ImageMargins.Left = 5
+      Images = dtmPrincipal.ImgList
+      TabOrder = 3
+      OnClick = btnRelatorioClick
+      ExplicitLeft = 319
+      ExplicitTop = -5
+      ExplicitHeight = 81
     end
   end
   object pnlPrincipal: TPanel
@@ -89,7 +104,8 @@ object frmTelaVenda: TfrmTelaVenda
     end
   end
   object dtsVendas: TDataSource
-    Left = 456
+    DataSet = dtmPrincipal.fdTableVenda
+    Left = 552
     Top = 48
   end
 end
