@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>1899-12-30 00:00:00.000.189,C:\Users\Anderson\Desktop\ProjetoFinal\ProjetoFinal-Pronto\Unit1.dfm=C:\Users\Anderson\Desktop\ProjetoFinal\ProjetoFinal-Pronto\View\TelaRelatorio.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.189,C:\Users\Anderson\Desktop\ProjetoFinal\ProjetoFinal-Pronto\Unit1.pas=C:\Users\Anderson\Desktop\ProjetoFinal\ProjetoFinal-Pronto\View\TelaRelatorio.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.903,=C:\Users\Anderson\Desktop\ProjetoFinal\ProjetoFinal-Pronto\Unit1.pas</Transaction>
-  </Transactions>
-</BorlandProject>
